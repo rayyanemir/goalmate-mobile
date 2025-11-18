@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:goalmate_mobile/widgets/product_card.dart';
 import 'package:goalmate_mobile/widgets/left_drawer.dart';
 
+
 class MyHomePage extends StatelessWidget {
   MyHomePage({super.key});
 

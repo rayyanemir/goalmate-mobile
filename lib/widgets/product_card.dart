@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:goalmate_mobile/screens/product_form_page.dart';
+import 'package:goalmate_mobile/screens/product_entry_list.dart';
+import 'package:goalmate_mobile/screens/my_products.dart';
 
 class ItemHomepage {
   final String name;
@@ -33,6 +35,22 @@ class ItemCard extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => const ProductFormPage()),
+            );
+          }
+
+          else if (item.name == "All Products") {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ProductEntryListPage()
+                  ),
+              );
+          }
+
+          else if (item.name == "My Products") {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const MyProductsPage()),
             );
           }
         },

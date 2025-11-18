@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:goalmate_mobile/screens/product_form_page.dart';
 import 'package:goalmate_mobile/screens/menu.dart';
+import 'package:goalmate_mobile/screens/product_entry_list.dart';
+import 'package:goalmate_mobile/screens/my_products.dart';
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
@@ -58,6 +60,27 @@ class LeftDrawer extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => const ProductFormPage()),
+              );
+            },
+          ),
+          ListTile(
+              leading: const Icon(Icons.grid_view),
+              title: const Text('Product List'),
+              onTap: () {
+                  // Route to news list page
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const ProductEntryListPage()),
+                  );
+              },
+          ),
+          ListTile(
+            leading: const Icon(Icons.list_alt),
+            title: const Text('My Products'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const MyProductsPage()),
               );
             },
           ),
